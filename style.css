@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  background-color: #fef1ef;
+
+  /* Ajout d'un quadrillage en arrière-plan */
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px; /* Taille des cases du quadrillage */
+
+  color: #ddcfff;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+
+  /* Centrage complet du contenu */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Utilisation de toute la hauteur de l'écran */
+  margin: 0;
+}
+
+h1 {
+  color: #e09ffc;
+  text-shadow: 3px 3px #ddcfff;
+  font-size: 1.5rem;
+  max-width: 90%;
+}
+
+button {
+  background-color: #ffcce3;
+  border: 4px solid #e09ffc;
+  padding: 15px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px #e09ffc;
+  box-shadow: 4px 4px 0 #e09ffc;
+  transition: 0.1s ease-in-out; /* Animation fluide */
+  max-width: 90%;
+  margin-top: 15px;
+}
+
+/* Effet d'interaction avec le bouton */
+button:hover {
+  background-color: #e09ffc;
+  box-shadow: 2px 2px 0 #ddcfff;
+  transform: translate(2px, 2px);
+}
+
+button:active {
+  background-color: #ddcfff;
+  box-shadow: 0px 0px 0 #e09ffc;
+  transform: translate(4px, 4px);
+}
+
+#projet {
+  background: #c8edff;
+  color: #5c5c8a;
+  display: inline-block;
+  padding: 20px;
+  border: 4px solid #ddcfff;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: 0.1s ease-in-out;
+  max-width: 90%;
+}
+
+/* 🖥️ Adaptation pour tablettes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 12px 15px;
+  }
+  #projet {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
+
+/* 📱 Adaptation pour téléphones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+    padding: 6px;
+  }
+  button {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+  #projet {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
