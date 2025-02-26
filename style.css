@@ -73,6 +73,11 @@ button:active {
   max-width: 90%;
 }
 
+footer {
+  margin-top: 20px;
+  font-size: 0.7rem;
+}
+
 /* 🖥️ Adaptation pour tablettes */
 @media (max-width: 768px) {
   h1 {
