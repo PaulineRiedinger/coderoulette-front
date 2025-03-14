@@ -2,26 +2,21 @@
 
 body {
   background-color: #fef1ef;
-
-  /* Ajout d'un quadrillage en arrière-plan */
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.1) 1px,
       transparent 1px
     ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px; /* Taille des cases du quadrillage */
-
+  background-size: 20px 20px;
   color: #ddcfff;
   font-family: "Press Start 2P", cursive;
   text-align: center;
-
-  /* Centrage complet du contenu */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Utilisation de toute la hauteur de l'écran */
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -43,12 +38,11 @@ button {
   color: #fff;
   text-shadow: 2px 2px #e09ffc;
   box-shadow: 4px 4px 0 #e09ffc;
-  transition: 0.1s ease-in-out; /* Animation fluide */
+  transition: 0.1s ease-in-out;
   max-width: 90%;
   margin-top: 15px;
 }
 
-/* Effet d'interaction avec le bouton */
 button:hover {
   background-color: #e09ffc;
   box-shadow: 2px 2px 0 #ddcfff;
@@ -78,20 +72,97 @@ footer {
   font-size: 0.7rem;
 }
 
-/* 🖥️ Adaptation pour tablettes */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.2rem;
-    padding: 8px;
-  }
-  button {
-    font-size: 0.9rem;
-    padding: 12px 15px;
-  }
-  #projet {
-    font-size: 0.9rem;
-    padding: 15px;
-  }
+/* 🎨 Style du formulaire */
+form {
+  background: #c8edff;
+  border: 4px solid #ddcfff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+label {
+  color: #5c5c8a;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+input,
+textarea {
+  background: #fff;
+  border: 3px solid #e09ffc;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.8rem;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  color: #5c5c8a;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ddcfff;
+}
+
+/* 🎨 Style du bouton d'envoi du formulaire */
+form button {
+  background-color: #ffcce3;
+  border: 4px solid #e09ffc;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px #e09ffc;
+  box-shadow: 4px 4px 0 #e09ffc;
+  transition: 0.1s ease-in-out;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #e09ffc;
+  box-shadow: 2px 2px 0 #ddcfff;
+  transform: translate(2px, 2px);
+}
+
+form button:active {
+  background-color: #ddcfff;
+  box-shadow: 0px 0px 0 #e09ffc;
+  transform: translate(4px, 4px);
+}
+
+.container {
+  max-width: 800px;
+  background: #c8edff;
+  color: #5c5c8a;
+  padding: 20px;
+  border: 4px solid #ddcfff;
+  font-size: 1rem;
+  margin: 20px auto;
+  text-align: left;
+  box-shadow: 4px 4px 0 #e09ffc;
+}
+
+h1,
+h2 {
+  color: #e09ffc;
+  text-shadow: 2px 2px #ddcfff;
+}
+
+a {
+  color: #e09ffc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* 📱 Adaptation pour téléphones */
@@ -100,11 +171,13 @@ footer {
     font-size: 1rem;
     padding: 6px;
   }
-  button {
+  button,
+  form button {
     font-size: 0.8rem;
     padding: 10px 12px;
   }
-  #projet {
+  #projet,
+  form {
     font-size: 0.8rem;
     padding: 10px;
   }
