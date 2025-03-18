@@ -20,13 +20,33 @@ body {
   margin: 0;
 }
 
+/* 🎨 Conteneur principal (cadre) */
+.main-container {
+  background: #ffe4e1;
+  border: 4px solid #ddcfff;
+  padding: 30px;
+  box-shadow: 6px 6px 0 #e09ffc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* 🎨 Centrage du titre */
 h1 {
+  text-align: center;
   color: #e09ffc;
   text-shadow: 3px 3px #ddcfff;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
   max-width: 90%;
 }
 
+/* 🎨 Bouton centré */
 button {
   background-color: #ffcce3;
   border: 4px solid #e09ffc;
@@ -39,7 +59,8 @@ button {
   text-shadow: 2px 2px #e09ffc;
   box-shadow: 4px 4px 0 #e09ffc;
   transition: 0.1s ease-in-out;
-  max-width: 90%;
+  max-width: 300px;
+  width: 100%;
   margin-top: 15px;
 }
 
@@ -55,6 +76,7 @@ button:active {
   transform: translate(4px, 4px);
 }
 
+/* 🎨 Zone d'affichage du projet sous le bouton */
 #projet {
   background: #c8edff;
   color: #5c5c8a;
@@ -64,12 +86,8 @@ button:active {
   font-size: 1rem;
   margin-top: 20px;
   transition: 0.1s ease-in-out;
-  max-width: 90%;
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 0.7rem;
+  max-width: 400px;
+  width: 100%;
 }
 
 /* 🎨 Style du formulaire */
@@ -82,18 +100,11 @@ form {
   align-items: center;
   gap: 10px;
   max-width: 300px;
-  width: 90%;
+  width: 100%;
   margin-top: 20px;
 }
 
-label {
-  color: #5c5c8a;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-input,
-textarea {
+input {
   background: #fff;
   border: 3px solid #e09ffc;
   padding: 10px;
@@ -104,8 +115,11 @@ textarea {
   color: #5c5c8a;
 }
 
-input:focus,
-textarea:focus {
+input::placeholder {
+  font-size: 0.7rem;
+}
+
+input:focus {
   outline: none;
   border-color: #ddcfff;
 }
@@ -137,24 +151,14 @@ form button:active {
   transform: translate(4px, 4px);
 }
 
-.container {
-  max-width: 800px;
-  background: #c8edff;
-  color: #5c5c8a;
-  padding: 20px;
-  border: 4px solid #ddcfff;
-  font-size: 1rem;
-  margin: 20px auto;
-  text-align: left;
-  box-shadow: 4px 4px 0 #e09ffc;
+/* 🎨 Footer en dehors du cadre */
+footer {
+  margin-top: 20px;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
-h1,
-h2 {
-  color: #e09ffc;
-  text-shadow: 2px 2px #ddcfff;
-}
-
+/* 🎨 Liens */
 a {
   color: #e09ffc;
   text-decoration: none;
@@ -168,7 +172,7 @@ a:hover {
 /* 📱 Adaptation pour téléphones */
 @media (max-width: 480px) {
   h1 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding: 6px;
   }
   button,

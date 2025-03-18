@@ -11,27 +11,23 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="main-container">
       <h1>CodeRoulette</h1>
-
-      <!-- Lorsqu'on clique -> exécution de la fonction genererProjet() définie dans script.js -->
       <button onclick="genererProjet()">Je code quoi aujourd’hui ?</button>
+      <p id="projet">
+        Clique sur le bouton 👆 pour découvrir ton prochain projet.
+      </p>
+
+      <form id="ajout-projet">
+        <input
+          type="text"
+          id="nouveau-projet"
+          placeholder="Ajouter une idée de projet..."
+          required
+        />
+        <button type="submit">Ajouter</button>
+      </form>
     </div>
-
-    <!-- Zone où projet généré s'affiche -->
-    <p id="projet">
-      Clique sur le bouton 👆 pour découvrir ton prochain projet.
-    </p>
-
-    <form id="ajout-projet">
-      <input
-        type="text"
-        id="nouveau-projet"
-        placeholder="Ajouter une idée de projet..."
-        required
-      />
-      <button type="submit">Ajouter</button>
-    </form>
 
     <footer>
       <br />
@@ -43,7 +39,6 @@
       <a href="mentions-legales.html">Mentions légales</a>
     </footer>
 
-    <!-- Importation du fichier JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
